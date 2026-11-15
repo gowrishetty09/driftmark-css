@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Driftmark — Animated CSS loaders</title>
+<meta name="description" content="24 CSS loading indicators inspired by navigation instruments and coastal motion. Preview each loop and copy its HTML and CSS.">
+<script>try { document.documentElement.dataset.theme = localStorage.getItem('dm-theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
+<link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="loaders.css">
+<script defer src="catalog.js"></script><script defer src="gallery.js"></script>
+</head>
+<body><header><a class="brand" href="./"><i aria-hidden="true"></i> Driftmark</a><nav><button id="motion" type="button" aria-pressed="false">Pause motion</button><button id="theme" type="button">Light view</button><a href="https://github.com/gowrishetty09/driftmark-css">GitHub ↗</a></nav></header>
+<main id="home">
+<section class="hero"><div><h1>CSS<br><em>loaders.</em></h1><p>24 loading indicators drawn from life on the water. Explore the loops, adjust their tempo, and take one into your app.</p><a class="jump" href="#collection">Browse loaders ↓</a></div>
+<div class="instrument"><div class="plate-title"><strong id="hero-name"></strong><span>Live preview</span></div><div class="board"><div id="hero-stage" class="stage"></div></div><div class="plate-foot"><span id="hero-period"></span><button type="button" id="advance">Next loader →</button></div></div></section>
+<section id="collection"><div class="row"><h2>The collection</h2><button type="button" id="shuffle">Shuffle loaders ⤨</button></div>
+<div class="tools"><label>Find a loader<input id="search" type="search" placeholder="Search by name or style"></label><label>Collection<select id="category"><option value="">All collections</option></select></label></div>
+<p id="count" role="status"></p><div id="grid"></div></section></main>
+<main id="detail" hidden><a href="./#collection">← All loaders</a><p id="family"></p><h1 id="name"></h1><p id="description"></p><div class="instrument"><div class="board"><div id="detail-stage" class="stage"></div></div><div class="plate-foot"><span id="period"></span><span>Indeterminate loader</span></div></div><div class="tools"><label>Status text<input id="edit" maxlength="100" placeholder="Loading"></label><label>Playback speed<select id="speed"><option value="0.5">Half speed</option><option value="1" selected>Normal speed</option><option value="1.5">1.5× speed</option><option value="2">Double speed</option></select></label><label>Loader size<select id="size"><option value="0.75">Small</option><option value="1" selected>Medium</option><option value="1.5">Large</option></select></label></div><div class="row"><h2>Use this loader</h2><button id="copy" disabled>Copy HTML + CSS</button></div><p id="notice" role="status"></p><h3>HTML</h3><pre><code id="markup"></code></pre><h3>CSS</h3><pre><code id="css"></code></pre><nav class="siblings"><a id="prev"></a><a id="next"></a></nav></main>
+<footer><a class="brand" href="./">Driftmark</a><nav><a href="loaders.css" download>Download CSS ↓</a><a href="https://gowrishetty09.github.io/strikeworks-css/">Strikeworks ↗</a></nav></footer></body></html>

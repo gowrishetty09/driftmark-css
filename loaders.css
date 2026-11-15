@@ -171,11 +171,12 @@
   background: var(--dm-flare);
   transform-origin: center top;
   transform: rotate(-16deg);
+  --dm-spread: -14deg;
   animation: dm-chart-dividers var(--dm-cycle, 2s) ease-in-out var(--dm-delay, 0s) infinite;
 }
 @keyframes dm-chart-dividers {
   0%,100% { rotate:-8deg; }
-  50% { rotate:14deg; }
+  50% { rotate:var(--dm-spread,14deg); }
 }
 
 /* Specimen: capstan-crown */
@@ -277,7 +278,7 @@
   inset: 8%;
   border: .11em solid currentColor;
   border-radius: 50%;
-  --dm-delay: -1s;
+  --dm-delay: calc(var(--dm-cycle, 2s) / -2);
   animation: dm-salt-ripple var(--dm-cycle, 2s) ease-out var(--dm-delay, 0s) infinite;
 }
 @keyframes dm-salt-ripple {
@@ -389,7 +390,7 @@
   background: currentColor;
   clip-path: polygon(0 0,100% 65%,0 100%);
   transform-origin: left;
-  --dm-delay: -.65s;
+  --dm-delay: calc(var(--dm-cycle, 2s) / -3);
   animation: dm-pennant-relay var(--dm-cycle, 2s) ease-in-out var(--dm-delay, 0s) infinite;
 }
 @keyframes dm-pennant-relay {
